@@ -8,8 +8,24 @@ packages = [{include = "project"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+sqlalchemy = "^2.0.23"
 
+[tool.poetry.group.dev.dependencies]
+blue = "^0.9.1"
+isort = "^5.12.0"
+taskipy = "^1.12.0"
+autoflake = "^1.7.8"
+pytest = "^7.4.2"
+
+[tool.isort]
+profile = "black"
+line_length = 79
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+lint = "autoflake --in-place --exclude=*/migrations/* --remove-all-unused-imports -r . && blue . && isort ."
+pre_test = "task lint"
+test = "pytest -s -x --cov-report=html --cov project -vv"

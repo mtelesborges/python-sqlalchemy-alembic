@@ -1,0 +1,11 @@
+/var
+
+/htmlcov
+
+.venv
+.idea
+.coverage
+**.env
+
+**__pycache__
+**cache
