@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  python-sqlalchemy-alembic:
+    container_name: python-sqlalchemy-alembic
+    image: python-sqlalchemy-alembic:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    working_dir: /var/www/app/
+    volumes:
+      - ./project:/var/www/app/project
+    env_file:
+      - project/.env
