@@ -5,7 +5,7 @@
 .venv
 .idea
 .coverage
-**.env
+project/.env
 
 **__pycache__
 **cache
