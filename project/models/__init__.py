@@ -1,4 +1,3 @@
-# pragma: no cover
 from datetime import datetime
 
 from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
