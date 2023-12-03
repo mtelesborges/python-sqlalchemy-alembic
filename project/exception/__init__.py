@@ -1,0 +1,2 @@
+class DatabaseUrlRequiredException(Exception):
+    pass
