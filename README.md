@@ -1,11 +1,10 @@
-<p align="center">
+<h1 align="center">
   <img src="assets/sqla_logo.png" alt="SQLAlchemy Logo"/>
-</p>
-<h1 align="center">SQLAlchemy & Alembic</h1>
+</h1>
 
 > This project contain a basic implementation using SQLAlchemy and Alembic
 
-This project uses poetry for environment managing and some libraries for code formatting
+*This project uses poetry for environment managing and some libraries for code formatting*
 
 ## Installing SQLAlchemy and Alembic 
 
@@ -18,6 +17,7 @@ poetry add alembic
 ## Configuring alembic
 - Initilizing alembic
 ```shell
+# inside the project folder, run the following code
 alembic init alembic
 ```
 
@@ -34,4 +34,10 @@ alembic revision --autogenerate -m "Initial migration"
 
 # executing migrations
 alembic upgrade head
+```
+
+## Tests
+```shell
+# inside the poetry environment, run the following code
+task test
 ```
